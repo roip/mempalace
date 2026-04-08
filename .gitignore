@@ -1,8 +1,58 @@
+# Python artifacts
 *.egg-info/
+*.egg
 dist/
 build/
 __pycache__/
 *.pyc
+*.pyo
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+
+# Environment + secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.p12
+secrets/
+.secrets/
+
+# IDE / editor
+.idea/
+.vscode/
+.cursor/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+
+# MemPalace local data (don't commit user palace contents accidentally)
 mempal.yaml
+.mempalace/
+folded_wings/
+folded_mini/
+*.mini.zst
+Lumi_ChromaDB/
+Lumi_ChromaDB_v2/
+
+# Logs
+*.log
+logs/
+
+# Misc
 .a5c/

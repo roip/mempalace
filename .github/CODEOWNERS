@@ -1,0 +1,36 @@
+# MemPalace CODEOWNERS
+#
+# Each line is a file pattern followed by one or more owners.
+# When a PR touches a matching path, GitHub auto-requests review from
+# the listed owners. The last matching pattern wins.
+#
+# Docs: https://docs.github.com/en/repositories/managing-your-repositories-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default — both owners review anything not covered below
+*                       @milla-jovovich @bensig
+
+# Core package — Ben's domain
+/mempalace/             @bensig
+/tests/                 @bensig
+/scripts/               @bensig
+
+# CI / build / release
+/.github/               @bensig
+/pyproject.toml         @bensig
+/uv.lock                @bensig
+
+# User-facing docs — both review (Aya owns voice, Ben owns accuracy)
+/README.md              @milla-jovovich @bensig
+/CONTRIBUTING.md        @milla-jovovich @bensig
+/docs/                  @milla-jovovich @bensig
+
+# Examples and skill definitions
+/examples/              @milla-jovovich @bensig
+/.claude-plugin/        @milla-jovovich @bensig
+/.codex-plugin/         @milla-jovovich @bensig
+
+# Hooks
+/hooks/                 @bensig
+
+# Benchmarks — Ben for code, both for results
+/benchmarks/            @bensig

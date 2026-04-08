@@ -30,3 +30,18 @@ jobs:
       - run: pip install ruff
       - run: ruff check .
       - run: ruff format --check .
+
+  typecheck:
+    # Type checking is NON-BLOCKING for now — mypy runs but `|| true` keeps
+    # the job green while we clean up existing warnings. Once the warning
+    # count is reasonable, remove the trailing `|| true` to make this gating.
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - run: pip install -e ".[dev]" mypy
+      - name: mypy
+        run: mypy mempalace/ || true
